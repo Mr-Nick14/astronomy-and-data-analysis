@@ -1,0 +1,15 @@
+services:
+  astronomy-ds:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: astronomy-ds:latest
+    container_name: astronomy-ds
+    working_dir: /workspace
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/workspace
+    environment:
+      PYTHONUNBUFFERED: "1"
+    restart: unless-stopped
