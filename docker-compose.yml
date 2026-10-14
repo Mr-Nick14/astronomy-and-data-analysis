@@ -7,7 +7,7 @@ services:
     container_name: astronomy-ds
     working_dir: /workspace
     ports:
-      - "8888:8888"
+      - "127.0.0.1:8888:8888"
     volumes:
       - ./:/workspace
     environment:
